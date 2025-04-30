@@ -4,7 +4,7 @@ public class CheckDigit
    {  
      int multiplier = 7;
      int total = 0;
-     for(int i = 0; i < getNumberOfDigits(num); i++){
+     for(int i = 1; i < getNumberOfDigits(num); i++){
        total += (getDigit(num, i) * multiplier);
        multiplier -= 1;
      }
