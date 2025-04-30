@@ -1,15 +1,15 @@
 public class CheckDigit 
 {   
-   public static int getCheck(int num) 
-   {  
-     int multiplier = 7;
-     int total = 0;
-     for(int i = 1; i < getNumberOfDigits(num); i++){
-       total += (getDigit(num, i) * multiplier);
-       multiplier -= 1;
-     }
-     return total % 10;
-   }
+public static int getCheck(int num)
+{
+    int sum = 0;
+    int numDigits = getNumberOfDigits(num);
+
+    for(int n = 1; n <= numDigits; n++)
+        sum += getDigit(num, n) * (8 - n);
+
+    return sum % 10;
+}
  
   /** Returns true if numWithCheckDigit is valid, or false    
    *  otherwise, as described in part (b). 
