@@ -10,7 +10,7 @@ public class CheckDigit
      int multiplier = 7;
      int index = 0;
      int total = 0;
-     for(int i = 0; i < getNumberOfDigits; i++){
+     for(int i = 0; i < getNumberOfDigits(num); i++){
        total += (getDigit(num,index) * multiplier);
        index += 1;
        multiplier -= 1;
